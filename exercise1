@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>D0440820</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+
+$(function(){
+	$.ajax({
+		url:"http://140.134.26.71:58080/web-prog/Hotels",
+		type:"GET",
+		dataType:"json",
+		success: function(data){
+			var items = data.Infos.Info;
+			for(var i = 0; i<item.length; i++){
+				var Add = item[i].Name;
+				var Class = 
+				var Description
+				var Fax
+				var Gov
+				var Grade
+				var Id
+				var Map
+				var Name
+				var Parkinginfo
+                                var Picdescribe1
+				var Picdescribe2
+				var Picdescribe3
+				var Picture1
+				var Picture2
+				var Picture3
+				var Px
+				var Py
+				var RegionId
+				var Serviceinfo
+				var Spec
+				var Tel
+				var Website
+				var Zipcode
+				$("#attractions").append('<div>'+items[i].Name+'</div><div><img src="'+imgURL+'" height="200" width="200"></div>');
+			}
+		},
+		error: function(){
+
+		}
+	});
+});
+</script>
+</head>
+<body>
+<div id="attractions">
+</div>
+</body>
+</html>
